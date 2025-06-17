@@ -8,7 +8,7 @@ include '../includes/koneksi.php';
 
     $gambar = null;
     if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] == 0) {
-        $namaFile = basename($_FILES['gambar']['nama_file']);
+        $namaFile = basename($_FILES['gambar']['name']);
         $targetPath = '../uploads/' . $namaFile;
 
         if (!is_dir('../uploads')) {

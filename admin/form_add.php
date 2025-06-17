@@ -11,8 +11,8 @@ include '../includes/koneksi.php';
 <h1>Tambah Produk</h1>
 <form action="../proses/proses_tambah_menu.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
-        <label>Nama</label>
-        <input type="text" name="nama" class="form-control" required>
+        <label>Nama Menu</label>
+        <input type="text" name="nama_menu" class="form-control" required>
     </div>
     <div class="mb-3">
         <label>Harga (Rp)</label>
