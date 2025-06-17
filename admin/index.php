@@ -47,7 +47,7 @@ include '../includes/nav.php';
             <?php $no = 1; while($p = $result->fetch_assoc()): ?>
             <tr>
                 <td><?= $no++ ?></td>
-                <td><?= htmlspecialchars($p['name']) ?></td>
+                <td><?= htmlspecialchars($p['nama_menu']) ?></td>
                 <td>Rp<?= number_format($p['harga'],0,',','.') ?></td>
                 <td>
                     <?php if (!empty($p['gambar']) && file_exists("../uploads/" . $p['gambar'])): ?>
