@@ -1,18 +1,15 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require 'config.php';
-
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    die("ID tidak valid.");
+include '../includes/koneksi.php';
+$id = $_GET['id'] ?? null;
+if (!$id) {
+    echo "ID menu tidak ditemukan.";
+    exit;
 }
-$id = (int) $_GET['id'];
-
-$result = $mysqli->query("SELECT * FROM products WHERE id = $id");
-if (!$result || $result->num_rows === 0) {
-    die("Data tidak ditemukan.");
-}
-$product = $result->fetch_assoc();
+$stmt = $conn->prepare("SELECT * FROM menu WHERE id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+$data = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -25,27 +22,27 @@ $product = $result->fetch_assoc();
 <body class="container py-4">
     <h1 class="mb-4">Edit Produk</h1>
 
-    <form action="save_edit.php" method="post" enctype="multipart/form-data" class="border p-4 rounded shadow-sm">
-        <input type="hidden" name="id" value="<?= $product['id'] ?>">
+    <form action="../proses/proses_edit_menu.php" method="post" enctype="multipart/form-data" class="border p-4 rounded shadow-sm">
+        <input type="hidden" name="id" value="<?= $data['id'] ?>">
 
         <div class="mb-3">
             <label class="form-label">Nama:</label>
-            <input type="text" name="name" value="<?= htmlspecialchars($product['name']) ?>" class="form-control" required>
+            <input type="text" name="nama" value="<?= htmlspecialchars($data['nama']) ?>" class="form-control" required>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Harga:</label>
-            <input type="number" name="price" value="<?= $product['price'] ?>" class="form-control" required>
+            <input type="number" name="harga" value="<?= $data['harga'] ?>" class="form-control" required>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Deskripsi:</label>
-            <textarea name="description" class="form-control" rows="3"><?= htmlspecialchars($product['description']) ?></textarea>
+            <textarea name="deskripsi" class="form-control" rows="3"><?= htmlspecialchars($data['deskripsi']) ?></textarea>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Gambar Baru:</label>
-            <input type="file" name="image" class="form-control">
+            <input type="file" name="gambar" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-success">Simpan Perubahan</button>
