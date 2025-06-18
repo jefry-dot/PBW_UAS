@@ -1,3 +1,4 @@
+<!-- punya Salomo -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -22,11 +23,11 @@
 </head>
 <body class="font-sans">
 
-  <!-- Navbar -->
+
 
  <?php include 'includes/nav.php'; ?>
 
-  <!-- Hero Section -->
+
   <header class="d-flex align-items-center justify-content-center text-center py-5 bg-cover min-vh-100" style="background-image: url('public/logo1.png');">
     <div class="bg-white bg-opacity-75 p-4 p-md-5 rounded shadow" style="max-width: 90%;">
       <h1 class="display-5 fw-bold text-dark">Gurih, Lezat, Bikin Ketagihan!</h1>
@@ -35,10 +36,7 @@
     </div>
   </header>
 
-  <!-- About Section -->
-    
 
-  <!-- Ganti dengan include('partials.about-section') jika pakai blade -->
   <section class="py-5 bg-light text-center">
     <div class="container">
       <h2>Tentang Kami</h2>
@@ -46,7 +44,7 @@
     </div>
   </section>
     
-  <!-- Menu Section -->
+
   <section class="py-5 bg-white">
     <div class="container">
       <div class="text-center mb-5">
@@ -56,7 +54,7 @@
       </div>
 
       <div class="row g-4">
-        <!-- Card 1 -->
+
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 shadow menu-card">
             <div class="card-body text-center">
@@ -73,7 +71,7 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
+
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 shadow menu-card">
             <div class="card-body text-center">
@@ -89,7 +87,7 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
+
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 shadow menu-card">
             <div class="card-body text-center">
@@ -105,7 +103,7 @@
           </div>
         </div>
 
-        <!-- Card 4 -->
+
         <div class="col-sm-6 col-lg-3">
           <div class="card h-100 shadow menu-card">
             <div class="card-body text-center">
@@ -124,16 +122,14 @@
     </div>
   </section>
 
-  <!-- Testimoni Section -->
-  <!-- Ganti dengan include('partials.testimoni') jika pakai blade -->
+
   <section class="py-5 bg-light text-center">
     
   </section>
 
 
 
-  <!-- Footer -->
-  <!-- Ganti dengan include('partials.footer') jika pakai blade -->
+
  <?php include 'includes/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

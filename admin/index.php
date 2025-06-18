@@ -1,7 +1,7 @@
 <!-- punya Rangga -->
 <?php
-include '../cek_login.php'; // Proteksi login
-require '../includes/koneksi.php'; // Koneksi database
+include '../cek_login.php'; 
+require '../includes/koneksi.php'; 
 
 $result = $conn->query("SELECT * FROM menu ORDER BY id DESC");
 ?>
@@ -16,7 +16,6 @@ $result = $conn->query("SELECT * FROM menu ORDER BY id DESC");
 </head>
 <body class="container-fluid p-0">
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid px-4">
     <a class="navbar-brand" href="#">Warung Kopi Admin</a>
@@ -43,7 +42,7 @@ $result = $conn->query("SELECT * FROM menu ORDER BY id DESC");
   </div>
 </nav>
 
-<!-- Konten -->
+
 <div class="container py-4">
     <h1 class="mb-4">Daftar Produk</h1>
     <a href="form_add.php" class="btn btn-primary mb-3">+ Tambah Produk</a>

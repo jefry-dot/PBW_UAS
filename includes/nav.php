@@ -1,18 +1,18 @@
-<!-- nav.php -->
+
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top shadow-sm">
   <div class="container">
-    <!-- Logo dan Brand -->
+
     <a class="navbar-brand d-flex align-items-center" href="/">
       <img src="public/logo.png" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
       <strong>Nasi Ayam Bu Ella</strong>
     </a>
 
-    <!-- Tombol toggle untuk mobile -->
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu Navigasi -->
+
     <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav ms-auto mb-2 mb-md-0">
         <li class="nav-item">
@@ -29,7 +29,7 @@
   </div>
 </nav>
 
-<!-- Script: Smooth Scroll & Conditional Redirect -->
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const aboutLinks = document.querySelectorAll(".about-link");

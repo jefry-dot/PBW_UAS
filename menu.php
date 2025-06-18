@@ -1,3 +1,5 @@
+<!-- punya Salomo -->
+
 <?php
 require 'includes/koneksi.php';
 
@@ -59,14 +61,14 @@ $result = $conn->query("SELECT * FROM menu ORDER BY id DESC");
     <?php endwhile; ?>
   </div>
 
-  <!-- Tombol Keranjang -->
+
 <div class="position-fixed bottom-0 end-0 m-4">
   <button onclick="showCart()" class="btn btn-danger rounded-pill shadow">
     🛒 Lihat Keranjang (<span id="cart-count">0</span>)
   </button>
 </div>
 
-<!-- Modal Keranjang -->
+
 <div id="cart-modal" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
   <div class="bg-white p-4 rounded shadow" style="max-width: 500px; width: 100%;">
     <h5>Keranjang Anda</h5>
@@ -81,7 +83,7 @@ $result = $conn->query("SELECT * FROM menu ORDER BY id DESC");
 
 </div>
 
-<!-- Sisanya (JS keranjang, modal, dsb) sama seperti jawaban sebelumnya -->
+
 <?php include 'includes/footer.php'; ?>
 
 
@@ -191,19 +193,19 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const filter = btn.getAttribute("data-filter");
 
-    // Tampilkan/hidden item sesuai filter
+
     document.querySelectorAll(".menu-item").forEach(item => {
       const cat = item.getAttribute("data-category");
       item.style.display = (filter === "all" || cat === filter) ? "block" : "none";
     });
 
-    // Reset semua tombol ke default
+
     document.querySelectorAll(".filter-btn").forEach(b => {
       b.classList.remove("btn-danger", "text-white");
       b.classList.add("btn-outline-danger");
     });
 
-    // Aktifkan tombol yang diklik
+
     btn.classList.remove("btn-outline-danger");
     btn.classList.add("btn-danger", "text-white");
   });
