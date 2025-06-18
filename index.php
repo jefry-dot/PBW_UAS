@@ -127,23 +127,10 @@
   <!-- Testimoni Section -->
   <!-- Ganti dengan include('partials.testimoni') jika pakai blade -->
   <section class="py-5 bg-light text-center">
-    <div class="container">
-      <h2>Testimoni</h2>
-      <p>Pelayanan dan rasa yang luar biasa!</p>
-    </div>
+    
   </section>
 
-  <!-- Komentar Livewire Placeholder -->
-  <div class="container my-5">
-    <!-- Ganti dengan @livewire('comment-form') -->
-    <div class="mb-3">
-      <h4>Tinggalkan Komentar</h4>
-      <form>
-        <textarea class="form-control" rows="3" placeholder="Tulis komentar Anda..."></textarea>
-        <button type="submit" class="btn btn-dark mt-2">Kirim</button>
-      </form>
-    </div>
-  </div>
+
 
   <!-- Footer -->
   <!-- Ganti dengan include('partials.footer') jika pakai blade -->
