@@ -36,6 +36,8 @@
   </header>
 
   <!-- About Section -->
+    
+
   <!-- Ganti dengan include('partials.about-section') jika pakai blade -->
   <section class="py-5 bg-light text-center">
     <div class="container">
@@ -43,7 +45,7 @@
       <p>Kami menyajikan makanan rumahan terbaik untuk Anda.</p>
     </div>
   </section>
-
+    
   <!-- Menu Section -->
   <section class="py-5 bg-white">
     <div class="container">
