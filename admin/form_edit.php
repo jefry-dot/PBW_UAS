@@ -1,3 +1,4 @@
+<!-- punya Rangga -->
 <?php
 include '../includes/koneksi.php';
 $id = $_GET['id'] ?? null;
