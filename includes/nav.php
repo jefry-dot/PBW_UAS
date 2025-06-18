@@ -3,7 +3,7 @@
   <div class="container">
     <!-- Logo dan Brand -->
     <a class="navbar-brand d-flex align-items-center" href="/">
-      <img src="logo.png" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
+      <img src="public/logo.png" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
       <strong>Nasi Ayam Bu Ella</strong>
     </a>
 
@@ -22,7 +22,7 @@
           <a class="nav-link" href="menu.php">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="kontak.php">Contact</a>
+          <a class="nav-link" href="kontak.php">kontak</a>
         </li>
       </ul>
     </div>
