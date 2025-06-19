@@ -1,10 +1,10 @@
 <!-- punya Deas -->
 <?php
 include '../includes/koneksi.php';
-$id = $_GET['id'] ?? null;
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $id = $_POST['id'] ?? null;
     $nama = $_POST['nama_menu'];
     $deskripsi = $_POST['deskripsi'];
     $harga = $_POST['harga'];
