@@ -28,7 +28,7 @@ $data = $result->fetch_assoc();
 
         <div class="mb-3">
             <label class="form-label">Nama:</label>
-            <input type="text" name="nama" value="<?= htmlspecialchars($data['nama_menu']) ?>" class="form-control" required>
+            <input type="text" name="nama_menu" value="<?= htmlspecialchars($data['nama_menu']) ?>" class="form-control" required>
         </div>
 
         <div class="mb-3">
