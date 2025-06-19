@@ -30,23 +30,3 @@
 </nav>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const aboutLinks = document.querySelectorAll(".about-link");
-
-    aboutLinks.forEach(link => {
-      link.addEventListener("click", function (e) {
-        const isHome = window.location.pathname === "/" || window.location.pathname === "/home";
-        const aboutSection = document.querySelector("#about-section");
-
-        if (isHome && aboutSection) {
-          e.preventDefault();
-          aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else if (!isHome) {
-          e.preventDefault();
-          window.location.href = "/about";
-        }
-      });
-    });
-  });
-</script>

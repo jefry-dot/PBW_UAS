@@ -29,24 +29,17 @@ $result = $conn->query("SELECT * FROM menu ORDER BY id DESC");
 
 <div class="container py-5">
   <div class="text-center mb-5">
-    <h1 class="display-5 fw-bold">Our Menu</h1>
-    <p class="lead text-muted">We consider all the drivers of change give you the components<br>you need to change to a truly</p>
+    <h1 class="display-5 fw-bold">Menu Kami</h1>
+    <p class="lead text-muted">Silahkan Pilih menu</p>
   </div>
 
-  <div class="mb-4 text-center">
-    <input type="text" id="search-input" placeholder="Cari menu..." class="form-control w-50 mx-auto rounded-pill shadow-sm">
-  </div>
+ 
 
-  <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
-    <button class="btn btn-danger filter-btn text-white" data-filter="all">All</button>
-    <button class="btn btn-outline-danger filter-btn" data-filter="Makanan">Makanan</button>
-    <button class="btn btn-outline-danger filter-btn" data-filter="Minuman">Minuman</button>
-    <button class="btn btn-outline-danger filter-btn" data-filter="Snack">Snack</button>
-  </div>
+ 
 
   <div class="row" id="menu-container">
     <?php while ($menu = $result->fetch_assoc()): ?>
-      <div class="col-md-3 mb-4 menu-item" data-category="Makanan">
+      <div class="col-md-3 mb-4 menu-item" >
         <div class="card h-100 shadow menu-card">
         <img src="uploads/<?= htmlspecialchars($menu['gambar']) ?>" class="card-img-top" alt="<?= htmlspecialchars($menu['nama_menu']) ?>">
 
@@ -165,51 +158,6 @@ function sendToWhatsapp() {
 }
 
 // Filter dan Search
-document.addEventListener("DOMContentLoaded", function () {
-  updateCartCount();
-
-  document.querySelectorAll(".filter-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const filter = btn.getAttribute("data-filter");
-      document.querySelectorAll(".menu-item").forEach(item => {
-        const cat = item.getAttribute("data-category");
-        item.style.display = (filter === "all" || cat === filter) ? "block" : "none";
-      });
-    });
-  });
-
-  document.getElementById("search-input").addEventListener("input", function () {
-    const keyword = this.value.toLowerCase();
-    document.querySelectorAll(".menu-item").forEach(item => {
-      const name = item.querySelector(".card-title").innerText.toLowerCase();
-      const desc = item.querySelector(".text-muted").innerText.toLowerCase();
-      item.style.display = (name.includes(keyword) || desc.includes(keyword)) ? "block" : "none";
-    });
-  });
-});
-
-
-document.querySelectorAll(".filter-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const filter = btn.getAttribute("data-filter");
-
-
-    document.querySelectorAll(".menu-item").forEach(item => {
-      const cat = item.getAttribute("data-category");
-      item.style.display = (filter === "all" || cat === filter) ? "block" : "none";
-    });
-
-
-    document.querySelectorAll(".filter-btn").forEach(b => {
-      b.classList.remove("btn-danger", "text-white");
-      b.classList.add("btn-outline-danger");
-    });
-
-
-    btn.classList.remove("btn-outline-danger");
-    btn.classList.add("btn-danger", "text-white");
-  });
-});
 
 </script>
 
