@@ -123,10 +123,6 @@
   </section>
 
 
-  <section class="py-5 bg-light text-center">
-    
-  </section>
-
 
 
 
